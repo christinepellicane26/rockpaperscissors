@@ -29,10 +29,15 @@ class Game extends Component {
         }
         
          else if ((playerOne === "rock" && playerTwo ==="scissors")||
-         (playerOne === "paper" && playerTwo ==="rock")) {
+         (playerOne === "paper" && playerTwo ==="rock") ||
+         (playerOne === "scissors" && playerTwo === "paper")) 
+         {
          
-         return "Player Two Wins!"
-         } else if (playerOne ==="scissors" && playerTwo ==="paper"){
+         return "Player One Wins!"
+
+         } else if ((playerOne ==="paper" && playerTwo ==="scissors")||
+         (playerOne === "scissors" && playerTwo ==="rock") ||
+         (playerOne === "rock" && playerTwo ==="paper")){
          
          return "Player Two Wins!"
       }
